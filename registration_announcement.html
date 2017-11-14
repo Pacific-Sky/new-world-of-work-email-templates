@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keirsey Pre-Work Instructions</title>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="inputs">
+      <p>Enter values below to update message on right.</p>
+      <input type="text" placeholder="Date of training" @keyup="updateMessage" id="date"/>
+      <input type="text" placeholder="Times of Training" @keyup="updateMessage" id="times"/>
+      <input type="text" placeholder="Location of training" @keyup="updateMessage" id="location"/>
+      <input type="text" placeholder="Host of training" @keyup="updateMessage" id="hostSite"/>
+      <input type="text" placeholder="Registration Link" @keyup="updateMessage" id="registrationLink"/>
+      <p>Click here to copy the message to your clipboard (where possible)</p>
+      <label for="autoOpen">Open New Email Automatically <input type="checkbox" id="autoOpen"></label>
+      <input type="button" value="Copy Message" @click="copyMessage">
+    </div>
+    <div id="output">
+      <table>
+        <thead>
+          <tr>
+            <td><img id="21st-century-employability-skills-training-logo" src="img/21st-century-employability-skills-training-logo.png" alt="21st Century Employability Skills Training Logo" width="450" /></td>
+          </tr>
+          <tr>
+            <td><img src="img/new-world-of-work-shasta-college-lockup.png" alt="New World of Work (powered by Doing What Matters and the California Community Colleges. Work is protected under the Creative Commons License)" width="701" /><br /></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <h2><strong>21st Century Employability Skills Training Curriculum, Instruction, Data, and Digital Badges</strong></h2>
+              <h3><strong>{{ date }}</strong>, <strong>{{ times }}</strong></h3>
+              <h3><strong>{{ location }}</strong></h3>
+              <p><a href="http://newworldofwork.org/">New World of Work</a> (NWoW) is pleased to offer a 21st Century Employability Skills Training in partnership with {{ hostSite }} at {{ location }}. Community college faculty and staff are encouraged to attend along with their regional partners in adult education, workforce development, and community based organizations. The training is best suited to practitioners who wish to incorporate employability skills curriculum in their courses or workshops delivered directly to learners. This includes, but is not limited to, CTE faculty and Deans, Work-based Learning Coordinators, Adult Education Providers, and Counselors.</p>
+              <p>New World of Work offers curriculum and resources to help educators prepare students for the 21st Century workplace. The two-day training provides an overview of all 20 lesson modules, video content, data collection templates, 21st Century Skills Badging, and offers tips on facilitation strategies. The training is fast paced, interactive, and allows instructors time to practice through group teach-backs. Participants who complete the training will earn a non-credit Certificate for Curriculum and Instruction in New World 21st Century Skills Modules at the end of Day 2.</p>
+              <p>Registration is on a first come first served basis as spots are limited. Deadline to register is {{ deadline }}</p>
+              <p><strong>Register today using the link below!</strong></p>
+              <p><a href="{{ registrationLink }}">{{ registrationLink }}</a></p>
+              <p>Questions? Contact <a href="mailto:admin@newworldofwork.org">admin@newworldofwork.org</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<script src="nwow-emails.js"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    date: '{{ date }}',
+    hostSite: '{{ host(s) }}',
+    location: '{{ location }}',
+    deadline: '{{ deadline }}',
+    registrationLink: '{{ registration link }}',
+    times: '{{ times }}'
+  },
+  methods: {
+    updateMessage,
+    copyMessage
+  }
+});
+</script>
+</html>

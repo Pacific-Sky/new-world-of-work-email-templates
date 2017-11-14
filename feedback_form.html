@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="inputs">
+      <p>Enter values below to update message on right.</p>
+      <input type="text" placeholder="Your Name" @keyup="updateMessage" id="yourName"/>
+      <input type="text" placeholder="Location of training" @keyup="updateMessage" id="location"/>
+      <input type="text" placeholder="Host of training" @keyup="updateMessage" id="hostSite"/>
+      <p>Click here to copy the message to your clipboard (where possible)</p>
+      <label for="autoOpen">Open New Email Automatically <input type="checkbox" id="autoOpen" data-subject="Please complete - NWoW Training Feedback Form"></label>
+      <input type="button" value="Copy Message" @click="copyMessage">
+    </div>
+    <div id="output">
+      <table>
+        <thead>
+          <tr>
+            <td><img id="21st-century-employability-skills-training-logo" src="img/21st-century-employability-skills-training-logo.png" alt="21st Century Employability Skills Training Logo" width="450" /></td>
+          </tr>
+          <tr>
+            <td><img src="img/new-world-of-work-shasta-college-lockup.png" alt="New World of Work (powered by Doing What Matters and the California Community Colleges. Work is protected under the Creative Commons License)" width="701" /><br /></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+            <p>Thank you again for participating in the 21st Century Employability Skills Training hosted by {{ hostSite }} at {{ location }}. Your contributions were invaluable and the work you did over the past two days is inspiring.</p>
+            <p>To help us work on future improvements to the training please provide your feedback on the facilitators, curriculum, data collection and digital badging information presented.</p>
+            <a href="http://www.emailmeform.com/builder/form/KSfr0e2M4x1f46D9b">Professional Development Training Feedback Form</a>
+
+            <p>Additionally, part of our grant funding is secured through data tracking and feedback on professional development and your feedback will help us properly report data to the Chancellor’s Office.</p>
+
+            <p>On behalf of the New World of Work team, welcome to our 21st Century Employability Skills community of practice!</p>
+
+            <p>All the best,</p>
+
+            <p>{{ yourName }}</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<script src="nwow-emails.js"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    yourName: '{{ your name }}',
+    hostSite: '{{ host(s) }}',
+    location: '{{ location }}'
+  },
+  methods: {
+    updateMessage,
+    copyMessage
+  }
+});
+</script>
+</html>

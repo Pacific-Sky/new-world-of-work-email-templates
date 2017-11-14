@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Training Details Week Before Reminder</title>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="inputs">
+      <p>Enter values below to update message on right.</p>
+      <input type="text" placeholder="Your Name" @keyup="updateMessage" id="yourName"/>
+      <input type="text" placeholder="Location of training" @keyup="updateMessage" id="location"/>
+      <input type="text" placeholder="Host of training" @keyup="updateMessage" id="hostSite"/>
+      <p>Click here to copy the message to your clipboard (where possible)</p>
+      <label for="autoOpen">Open New Email Automatically <input type="checkbox" id="autoOpen"></label>
+      <input type="button" value="Copy Message" @click="copyMessage">
+    </div>
+    <div id="output">
+      <table>
+        <thead>
+          <tr>
+            <td><img id="21st-century-employability-skills-training-logo" src="img/21st-century-employability-skills-training-logo.png" alt="21st Century Employability Skills Training Logo" width="450" /></td>
+          </tr>
+          <tr>
+            <td><img src="img/new-world-of-work-shasta-college-lockup.png" alt="New World of Work (powered by Doing What Matters and the California Community Colleges. Work is protected under the Creative Commons License)" width="701" /><br /></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Greetings,</p>
+
+              <p>On behalf of New World of Work and our training host {{ hostSite }}, we are delighted to have you participate in the 21st Century Employability Skills Training next week at {{ location }}. The two-day training provides an overview of all 20 lesson modules, video content, data collection templates, 21st Century Digital Badges, and offers tips on facilitation strategies. The training is fast paced, interactive, and allows participants time to practice through group teach-backs. Participants can earn a non-credit certificate of completion at the end of Day 2. Attached is the training two-day agenda for more information as well as a campus map and parking permit.</p>
+
+              <p>A few friendly reminders:</p>
+              <ul>
+              <li>The training is two full days. Participants who complete both day one and day two will earn their Certificate for Curriculum and Instruction in New World 21st Century Skills Modules.</li>
+              <li>Upon arrival, you will receive a training binder with all NWoW curriculum and resources as well as a flash drive that contains electronic copies.</li>
+              <li>Please arrive by 8:45 a.m. to check-in, meet other training participants and enjoy breakfast.</li>
+              <li>Bring your laptop or another mobile device to access training material and a copy of your Keirsey report.</li>
+              </ul>
+
+              <p>Feel free to e-mail me if you have any questions.</p>
+
+              <p>Kind regards,</p>
+
+              <p>{{ yourName }}</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</body>
+<script src="nwow-emails.js"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    yourName: '{{ your name }}',
+    hostSite: '{{ host }}',
+    location: '{{ location }}'
+  },
+  methods: {
+    updateMessage,
+    copyMessage
+  }
+});
+</script>
+</html>

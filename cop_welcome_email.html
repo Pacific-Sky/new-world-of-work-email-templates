@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keirsey Pre-Work Instructions</title>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="inputs">
+      <p>Enter values below to update message on right.</p>
+      <input type="text" placeholder="Host of training" @keyup="updateMessage" id="hostSite"/>
+      <input type="text" placeholder="Trainer Names" @keyup="updateMessage" id="trainerNames"/>
+      <input type="text" placeholder="College Partners" @keyup="updateMessage" id="collegePartners"/>
+      <p>Click here to copy the message to your clipboard (where possible)</p>
+      <label for="autoOpen">Open New Email Automatically <input type="checkbox" id="autoOpen"></label>
+      <input type="button" value="Copy Message" @click="copyMessage">
+    </div>
+    <div id="output">
+      <table>
+        <thead>
+          <tr>
+            <td><img id="21st-century-employability-skills-training-logo" src="img/21st-century-employability-skills-training-logo.png" alt="21st Century Employability Skills Training Logo" width="450" /></td>
+          </tr>
+          <tr>
+            <td><img src="img/new-world-of-work-shasta-college-lockup.png" alt="New World of Work (powered by Doing What Matters and the California Community Colleges. Work is protected under the Creative Commons License)" width="701" /><br /></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Greetings!</p>
+
+              <p>Thanks to all of you who participated in the New World of Work 21st Century Skills Training hosted by {{ hostSite }}. If you haven't had the chance yet, please go ahead and fill out the <a href="http://www.emailmeform.com/builder/form/KSfr0e2M4x1f46D9b">Training Feedback form</a>.</p>
+
+              <p>On behalf of your hosts {{ hostSite }}, your trainers {{ trainerNames }}, and the entire New World of Work staff, we welcome you to the <strong>Community of Practice (CoP)</strong> for 21st Century Skills! We are also happy to welcome {{ collegePartners }} as an official partner college through your faculty/staff participation in this training. To be a partner, at least 2-3 faculty/staff from a given college need to attend a 21st Century Skills Training with plans to implement the curriculum.</p>
+
+              <p>We host quarterly webinars with CoP and partner college members to make sure you have the most up to date information on data collection and lesson content, and to showcase the great work you all are doing. The <strong>branded photo from your training</strong> (attached) is already garnering praise through our NWoW social media sites this week. Congrats for being innovative leaders in contextualizing 21st Century Skills!</p>
+
+              <p>We hosted our most recent webinar before your training. The relevant update for your group is a reminder to submit your <strong>Data Tracking form</strong> in order to access FREE LinkedIn Learning/Lynda.com codes for your students who are going through our 21st Century Skills coursework. <a href="http://www.emailmeform.com/builder/form/Z526h1cdGOspKf3Y7fuVo9">The form takes no more than 5 minutes to complete, and can be accessed here</a>.</p>
+              <p>Once you submit the form, our data lead, William Ogle, will reach out to you for next steps. He can be reached directly at <a href="mailto:wogle@newworldofwork.org">wogle@newworldofwork.org</a>.</p>
+
+              <p>For additional data collection, we have the <strong>Pre and Post Student/Employer Surveys for your use</strong>. Please see the attached guide.</p>
+
+              <p>In addition, all of you who completed both days of the training should have received an email invite from LaunchPath to create an account and claim your <strong>Instructor Badge</strong>! For those who work with college students, adult learners, and/or workforce development clients, you will also be able to invite your learners to take 21st Century Skill digital badge assessments once you have taught both lessons of a given skill. If you have questions on badges, please reach out to the Statewide TAP for Employability Skills, <strong>Shannon Wells</strong> at: <a href="mailto:swells@shastacollege.edu">swells@shastacollege.edu</a>.</p>
+
+              <p>For those of you interested in utilizing the <strong>Keirsey Assessment</strong> with your learners, please fill out your request on Keirsey's ordering portal. You will want to indicate that you are part of the New World of Work program, which makes you eligible for our negotiated rate of $10 per assessment for orders of 30 or more assessments. You should also request the easier assessment language for the Career Reports. The Keirsey team will step you through the payment process and set you up with your own administrator's portal. <a href="http://www.keirsey.com/become_admin.aspx">http://www.keirsey.com/become_admin.aspx</a></p>
+
+              <p>If you would like to use our branded PR for your program, please visit <a href="https://mc2.wufoo.com/forms/new-world-of-work-collateral-order-form/">the ordering portal</a>.</p>
+              <p>You will be able to preview the options for flyers and brochures, see costs, and estimate delivery times based on your orders.</p>
+
+              <p>If you have any questions or specific follow-up items, please contact me at <a href="mailto:rgill@newworldofwork.org">rgill@newworldofwork.org</a>.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<script src="nwow-emails.js"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    hostSite: '{{ host(s) }}',
+    trainerNames: '{{ trainers }}',
+    collegePartners: '{{ college partners }}'
+  },
+  methods: {
+    updateMessage,
+    copyMessage
+  }
+});
+</script>
+</html>

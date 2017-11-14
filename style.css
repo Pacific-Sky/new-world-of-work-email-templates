@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+}
+
+h1 {
+  color: #195e6f;
+}
+
+h2 {
+  color: #db7933;
+}
+
+#app {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 6rem 4rem 4rem;
+  font-size: 12px;
+}
+
+#nwow-email-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1rem 4rem;
+  border-bottom: 1px solid #195e6f;
+}
+
+#nwow-email-nav a {
+  color: inherit;
+}
+
+#nwow-email-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#output {
+  padding-left: 3rem;
+  flex: 0 1 60em;
+  line-height: 1.618;
+}
+
+#inputs {
+  flex: 0 1 30em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-right: 3rem;
+}
+
+#inputs input {
+  flex: 1 1 100%;
+  height: 2rem;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: black;
+  margin-bottom: 1rem;
+}
+
+#inputs #autoOpen {
+  margin: 0;
+  height: auto;
+}
+
+label[for='autoOpen'] {
+  margin-bottom: 1rem;
+}
+
+#inputs input[type='button'] {
+  border: 0;
+  cursor: pointer;
+}
+
+/*! system-font.css v1.1.0 | CC0-1.0 License | github.com/jonathantneal/system-font-face */
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 300;
+  src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'),
+    local('.LucidaGrandeUI'), local('Segoe UI Light'), local('Ubuntu Light'), local('Roboto-Light'),
+    local('DroidSans'), local('Tahoma');
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 300;
+  src: local('.SFNSText-LightItalic'), local('.HelveticaNeueDeskInterface-Italic'),
+    local('.LucidaGrandeUI'), local('Segoe UI Light Italic'), local('Ubuntu Light Italic'),
+    local('Roboto-LightItalic'), local('DroidSans'), local('Tahoma');
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 400;
+  src: local('.SFNSText-Regular'), local('.HelveticaNeueDeskInterface-Regular'),
+    local('.LucidaGrandeUI'), local('Segoe UI'), local('Ubuntu'), local('Roboto-Regular'),
+    local('DroidSans'), local('Tahoma');
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 400;
+  src: local('.SFNSText-Italic'), local('.HelveticaNeueDeskInterface-Italic'),
+    local('.LucidaGrandeUI'), local('Segoe UI Italic'), local('Ubuntu Italic'),
+    local('Roboto-Italic'), local('DroidSans'), local('Tahoma');
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 500;
+  src: local('.SFNSText-Medium'), local('.HelveticaNeueDeskInterface-MediumP4'),
+    local('.LucidaGrandeUI'), local('Segoe UI Semibold'), local('Ubuntu Medium'),
+    local('Roboto-Medium'), local('DroidSans-Bold'), local('Tahoma Bold');
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 500;
+  src: local('.SFNSText-MediumItalic'), local('.HelveticaNeueDeskInterface-MediumItalicP4'),
+    local('.LucidaGrandeUI'), local('Segoe UI Semibold Italic'), local('Ubuntu Medium Italic'),
+    local('Roboto-MediumItalic'), local('DroidSans-Bold'), local('Tahoma Bold');
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 700;
+  src: local('.SFNSText-Bold'), local('.HelveticaNeueDeskInterface-Bold'), local('.LucidaGrandeUI'),
+    local('Segoe UI Bold'), local('Ubuntu Bold'), local('Roboto-Bold'), local('DroidSans-Bold'),
+    local('Tahoma Bold');
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 700;
+  src: local('.SFNSText-BoldItalic'), local('.HelveticaNeueDeskInterface-BoldItalic'),
+    local('.LucidaGrandeUI'), local('Segoe UI Bold Italic'), local('Ubuntu Bold Italic'),
+    local('Roboto-BoldItalic'), local('DroidSans-Bold'), local('Tahoma Bold');
+}
