@@ -57,7 +57,12 @@ function copyMessage(event) {
   menu.id = 'nwow-email-nav';
   var list = document.createElement('ul');
   menu.appendChild(list);
-  [{ name: 'Email Index', link: '/' }].forEach(function(item) {
+  [
+    {
+      name: 'Email Index',
+      link: 'https://pacific-sky.github.io/new-world-of-work-email-templates/'
+    }
+  ].forEach(function(item) {
     var DOMItem = document.createElement('li');
     var link = document.createElement('a');
     link.href = item.link;
