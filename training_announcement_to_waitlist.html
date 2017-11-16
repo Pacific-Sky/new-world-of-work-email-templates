@@ -17,18 +17,15 @@
       <input type="text" placeholder="Host(s) of training" @keyup="updateMessage" id="hostSite"/>
       <input type="text" placeholder="Registration deadline" @keyup="updateMessage" id="deadline"/>
       <input type="text" placeholder="Instructions and next steps" @keyup="updateMessage" id="instructions"/>
-      <p>Click here to copy the message to your clipboard (where possible)</p>
       <label for="autoOpen">Open New Email Automatically <input type="checkbox" id="autoOpen" data-subject="NWoW 21st Century Employability Skills Training"></label>
+      <p>Click here to copy the message to your clipboard (where possible)</p>
       <input type="button" value="Copy Message" @click="copyMessage">
     </div>
     <div id="output">
       <table>
         <thead>
           <tr>
-            <td><img id="21st-century-employability-skills-training-logo" src="img/21st-century-employability-skills-training-logo.png" alt="21st Century Employability Skills Training Logo" width="450" /></td>
-          </tr>
-          <tr>
-            <td><img src="img/new-world-of-work-shasta-college-lockup.png" alt="New World of Work (powered by Doing What Matters and the California Community Colleges. Work is protected under the Creative Commons License)" width="701" /><br /></td>
+              <th><img id="21st-century-employability-skills-training-logo" src="img/21st-century-employability-skills-training-logo.png" alt="21st Century Employability Skills Training Logo" width="500" /></th>
           </tr>
         </thead>
         <tbody>
@@ -48,6 +45,11 @@
             </td>
           </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <td><img src="img/new-world-of-work-shasta-college-lockup.png" alt="New World of Work (powered by Doing What Matters and the California Community Colleges. Work is protected under the Creative Commons License)" width="500" /><br /></td>
+          </tr>
+        </tfoot>
       </table>
 
     </div>

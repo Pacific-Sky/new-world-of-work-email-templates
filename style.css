@@ -2,6 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: system-ui;
+  line-height: 1.618;
+}
+
+p {
+  line-height: inherit;
 }
 
 h1 {
@@ -10,6 +15,19 @@ h1 {
 
 h2 {
   color: #db7933;
+}
+
+textarea {
+  min-height: 10em;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+ul {
+  padding-left: 1.5em;
 }
 
 #app {
